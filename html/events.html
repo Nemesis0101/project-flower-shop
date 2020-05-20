@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -129,9 +129,8 @@
         const galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 15,
             slidesPerView: 4,
-            loop: true,
-            freeMode: false,
-            loopedSlides: 5,
+            freeMode: true,
+            loopedSlides: 4,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
             loop: true,
@@ -141,8 +140,7 @@
         });
         const galleryTop = new Swiper('.gallery-top', {
             spaceBetween: 10,
-            loop: true,
-            loopedSlides: 5,
+            loopedSlides: 4,
             loop: true,
             autoplay: {
                 delay: 3000,
@@ -152,12 +150,6 @@
             },
             thumbs: {
                 swiper: galleryThumbs,
-            },
-            breakpoints: {
-                1920: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                },
             },
         });
     </script>
