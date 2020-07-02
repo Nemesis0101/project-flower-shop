@@ -1,1 +1,28 @@
-"use strict";function menu(){var e=document.querySelector(".nav"),t=document.querySelector(".burger-menu");t.addEventListener("click",function(){e.classList.toggle("nav_active"),t.classList.toggle("burger-menu-cross")})}menu(),document.querySelectorAll('a[href^="#"]').forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"})})});
+///////////////////////// menu
+
+function menu() {
+    let nav = document.querySelector(".nav");
+    let burgerMenu = document.querySelector(".burger-menu");
+
+    burgerMenu.addEventListener("click", () => {
+        nav.classList.toggle("nav_active");
+        burgerMenu.classList.toggle("burger-menu-cross");
+    });
+}
+menu();
+
+///////////////////////// end of menu
+
+////////////////////// smoth scroll
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});
+
+//////////////////// end of smoth scroll
